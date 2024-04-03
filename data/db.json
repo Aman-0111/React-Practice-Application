@@ -1,0 +1,53 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "name": "Match Day Update",
+      "body": "Incredible game tonight! Our team fought hard and secured a 2-1 victory over the rivals. #GoTeam",
+      "date": "2024-03-13",
+      "poster": "Slough Town FC"
+    },
+    {
+      "id": "2",
+      "name": "Training Session Insights",
+      "body": "Today's training session was intense! Focused on building stamina and teamwork. Feeling pumped for the next match. #TrainingDay",
+      "date": "2024-03-13",
+      "poster": "Everton"
+    },
+    {
+      "id": "3",
+      "name": "Player of the Month",
+      "body": "Congratulations to Salah for being awarded the Player of the Month! Your dedication and skill have been outstanding. #PlayerOfTheMonth",
+      "date": "2024-03-05",
+      "poster": "LFC"
+    },
+    {
+      "id": "4",
+      "name": "Match Day Update",
+      "body": "Incredible game tonight! Our team fought hard and secured a 7-1 victory over the rivals. #GoTeam",
+      "date": "2024-03-13",
+      "poster": "Manchester City"
+    },
+    {
+      "id": "5",
+      "name": "Training Session Insights",
+      "body": "Today's training session was intense! Focused on building stamina and teamwork. Feeling pumped for the next match. #TrainingDay",
+      "date": "2024-03-13",
+      "poster": "Arsenal"
+    },
+    {
+      "id": "6",
+      "name": "Player of the Month",
+      "body": "Congratulations to Palmer for being awarded the Player of the Month! Your dedication and skill have been outstanding. #PlayerOfTheMonth",
+      "date": "2024-03-05",
+      "poster": "Chelsea"
+    },
+    {
+      "id": "4b18",
+      "name": "bruh",
+      "body": "bruh",
+      "poster": "Everton",
+      "date": "few"
+    }
+  ]
+}

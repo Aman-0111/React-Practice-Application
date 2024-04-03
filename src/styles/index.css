@@ -1,0 +1,426 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+/* base styles */
+* {
+  margin: 0;
+  font-family: "Quicksand";
+  color: white; /* Light text color */
+}
+
+body {
+  background-color: #333; /* Dark background color */
+}
+
+.navbar {
+  max-width: 80rem;
+  padding: 2rem; /* Padding around the content */
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space between the title and links */
+  align-items: center; /* Center items vertically */
+  margin: 0 auto;
+  border-bottom: 0.1rem solid white;
+}
+
+.content{
+  max-width: 80rem;
+  margin: 4rem auto;
+  padding: 2rem;
+}
+
+.navbar h1 {
+  font-size: 2.4rem;
+  margin: 0; /* Remove default margin */
+}
+
+.links a {
+  color: white; /* Light link color */
+  text-decoration: none; /* Remove underline from links */
+  padding: 0.5rem 1.5rem; /* Padding around the links */
+  background-color: #555; /* Slightly lighter background for links */
+  margin-left: 1rem; /* Space between links */
+  border-radius: 0.5rem; /* Rounded corners for links */
+  transition: background-color 0.3s; /* Smooth background color change on hover */
+}
+
+.links a:hover {
+  background-color: #777; /* Change background color on hover */
+}
+
+.home {
+  padding: 2rem; /* Padding around the content */
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack items vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: left; /* Center content horizontally */
+}
+
+
+.home h2 {
+  font-size: 2rem; /* Larger font size for the heading */
+  margin: 0 0 2rem 0; /* Space below the heading, remove margin from top */
+}
+
+button {
+  background: linear-gradient(145deg, #007CBA, #005f73); /* Gradient background */
+  color: white; /* White text */
+  padding: 1rem 2rem; /* Padding around the text */
+  border: none; /* No border */
+  cursor: pointer; /* Cursor changes to pointer to indicate it's clickable */
+  font-size: 1rem; /* Font size */
+  font-weight: 500; /* Medium font weight */
+  border-radius: 0.5rem; /* Rounded corners */
+  margin-top: 0.5rem; /* Space above the post details */
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  transition: background 0.3s, box-shadow 0.2s, transform 0.2s; /* Smooth transitions for interactive effects */
+}
+
+button:hover {
+  background: linear-gradient(155deg, #005f73, #007CBA); /* Slightly altered gradient on hover for visual feedback */
+  box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.3); /* Increased shadow for a lifted effect */
+  transform: translateY(-0.2rem); /* Slight lift effect */
+}
+
+button:active {
+  transform: translateY(0.1rem); /* Simulates a press-down effect */
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.2); /* Reverts to original shadow */
+}
+
+.post-preview {
+  background-color: #444; /* Slightly lighter background to stand out from the page background */
+  color: #ddd; /* Lighter text color for contrast */
+  padding: 1rem; /* Padding around the content */
+  margin-bottom: 2rem; /* Space between posts */
+  border-radius: 1rem; /* Rounded corners for a softer look */
+  transition: transform 0.2s, background-color 0.3s; /* Smooth transitions for hover effects */
+}
+
+.post-preview:hover {
+  transform: translateY(-0.5rem); /* Slightly raise the post on hover */
+  background-color: #555; /* Change background color on hover */
+}
+
+.post-preview h2 {
+  color: #fff; /* Even lighter color for the title for higher contrast */
+  margin-bottom: 0.5rem; /* Space between the title and the body text */
+}
+
+.post-preview p {
+  font-size: 0.9rem; /* Slightly smaller font size for the post details */
+  margin-top: 0.5rem; /* Space above the post details */
+}
+
+.post-preview a {
+  text-decoration: none;
+}
+
+.post-details {
+  color: #ddd; /* Light text color for readability */
+  background-color: #444; /* Slightly lighter background than the page for emphasis */
+  border-radius: 10px; /* Rounded corners for a modern look */
+  padding: 2rem; /* Spacious padding for content */
+  margin: 2rem auto; /* Centering the details section with margin */
+  max-width: 80rem; /* Consistent max-width with other content */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+}
+
+.post-details article {
+  border-top: 1px solid #666; /* Subtle border for the article top */
+  padding-top: 1rem; /* Spacing after the border */
+}
+
+.post-details h2 {
+  color: #fff; /* Brighter text for the heading for emphasis */
+  margin-bottom: 0.5rem; /* Space below the heading */
+}
+
+.post-details p {
+  margin-bottom: 1rem; /* Spacing between paragraphs */
+  color: #ccc; /* Slightly dimmer text for less emphasis */
+  line-height: 1.6; /* Improved line height for readability */
+}
+
+.post-details div {
+  margin-top: 2rem; /* Space before the main content body */
+  background-color: #333; /* Darker background for the content body to differentiate */
+  padding: 1rem; /* Padding around the content body */
+  border-radius: 5px; /* Slightly rounded corners for the content body */
+}
+
+/* Loading and Error Messages */
+.post-details > div {
+  color: #ff6b6b; /* Bright color for visibility */
+  background-color: #555; /* Background differentiation */
+  padding: 1rem; /* Padding for the message */
+  margin: 1rem 0; /* Margin around the message */
+  border-radius: 5px; /* Consistency in design */
+  text-align: center; /* Center the text for visibility */
+}
+
+.create {
+  color: #ddd; /* Light text color for readability */
+  background-color: #333; /* Consistent with the page background */
+  padding: 2rem; /* Spacious padding for content */
+  margin: 2rem auto; /* Centering the form with margin */
+  max-width: 50rem; /* Suitable max-width for form */
+  border-radius: 10px; /* Rounded corners for a modern look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+}
+
+.create h2 {
+  margin-bottom: 2rem; /* Space below the heading */
+}
+
+.create form {
+  display: flex;
+  flex-direction: column; /* Stack form fields vertically */
+}
+
+.create label {
+  margin-bottom: 0.5rem; /* Space below each label */
+  font-weight: 600; /* Slightly bolder font for labels */
+}
+
+.create input[type="text"],
+.create textarea,
+.create select {
+  background-color: #444; /* Slightly lighter background for fields */
+  color: #ddd; /* Light text color */
+  border: 1px solid #555; /* Subtle border */
+  border-radius: 5px; /* Rounded corners for fields */
+  padding: 0.5rem; /* Padding inside the fields */
+  margin-bottom: 1.5rem; /* Space between form fields */
+}
+
+.create textarea {
+  resize: vertical; /* Allow only vertical resizing */
+  min-height: 100px; /* Minimum height to ensure ample writing space */
+}
+
+.create button {
+  background: linear-gradient(145deg, #007CBA, #005f73); /* Gradient background */
+  color: white; /* White text */
+  padding: 10px 20px; /* Padding around the text */
+  border: none; /* No border */
+  cursor: pointer; /* Cursor changes to pointer to indicate it's clickable */
+  font-size: 1rem; /* Font size */
+  border-radius: 5px; /* Rounded corners */
+  transition: background 0.3s, transform 0.2s; /* Smooth transitions for interactive effects */
+  align-self: start; /* Align button to the start of the form */
+}
+
+.create button:hover {
+  background: linear-gradient(155deg, #005f73, #007CBA); /* Altered gradient on hover */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); /* Shadow for depth */
+  transform: translateY(-2px); /* Lift effect */
+}
+
+.create button:active {
+  transform: translateY(1px); /* Press down effect */
+  box-shadow: none; /* Remove shadow when pressed */
+}
+
+.to-do-list {
+  color: #ddd; /* Light text color for readability */
+  background-color: #333; /* Consistent with the page background */
+  padding: 2rem; /* Spacious padding for content */
+  max-width: 40rem; /* Suitable max-width for the list */
+  margin: 2rem auto; /* Centering the list */
+  border-radius: 10px; /* Rounded corners for a modern look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+}
+
+.to-do-list h2 {
+  margin-bottom: 1.5rem; /* Space below the heading */
+}
+
+.to-do-list input[type="text"] {
+  width: 70%; /* Responsive width */
+  padding: 0.5rem; /* Padding for input */
+  border: 1px solid #555; /* Subtle border */
+  background-color: #444; /* Slightly lighter background */
+  color: #ddd; /* Text color */
+  border-radius: 5px; /* Rounded corners */
+  margin-right: 1rem; /* Space between input and button */
+}
+
+.to-do-list button {
+  padding: 0.5rem 1rem; /* Padding around the text */
+  background: linear-gradient(145deg, #007CBA, #005f73); /* Gradient background */
+  color: white; /* Text color */
+  border: none; /* No border */
+  cursor: pointer; /* Cursor indicates clickable */
+  border-radius: 5px; /* Rounded corners */
+  transition: background 0.3s, box-shadow 0.2s; /* Smooth transitions */
+}
+
+.to-do-list button:hover {
+  background: linear-gradient(155deg, #005f73, #007CBA); /* Hover effect */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); /* Shadow for depth */
+}
+
+.to-do-list ul {
+  list-style: none; /* Remove default list styling */
+  padding: 0; /* Remove default padding */
+  margin-top: 1.5rem; /* Space above the list */
+}
+
+.to-do-list li {
+  background-color: #444; /* Slightly lighter background */
+  margin-bottom: 0.5rem; /* Space between tasks */
+  padding: 0.5rem; /* Padding inside each task */
+  border-radius: 5px; /* Rounded corners for tasks */
+  display: flex; /* Flex layout for task and delete button */
+  justify-content: space-between; /* Space between task text and delete button */
+  align-items: center; /* Vertically center the content */
+}
+
+.to-do-list li button {
+  background-color: #ff6b6b; /* Red background for delete button */
+  border: none; /* No border */
+  cursor: pointer; /* Indicates clickable */
+  color: white; /* Text color */
+  border-radius: 5px; /* Rounded corners */
+  padding: 0.25rem 0.5rem; /* Padding */
+  transition: background 0.2s; /* Smooth transition */
+}
+
+.to-do-list li button:hover {
+  background-color: #ff4c4c; /* Darker shade on hover */
+}
+
+.recipe-finder {
+  color: #ddd; /* Light text color for readability */
+  background-color: #333; /* Consistent with the page background */
+  padding: 2rem; /* Spacious padding for content */
+  max-width: 60rem; /* Suitable max-width */
+  margin: 2rem auto; /* Centering the finder */
+  border-radius: 10px; /* Rounded corners for a modern look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+}
+
+.recipe-finder h2 {
+  margin-bottom: 1.5rem; /* Space below the heading */
+}
+
+.recipe-finder input[type="text"] {
+  width: calc(100% - 120px); /* Responsive width, accounting for button */
+  padding: 0.5rem; /* Padding for input */
+  border: 1px solid #555; /* Subtle border */
+  background-color: #444; /* Slightly lighter background */
+  color: #ddd; /* Text color */
+  border-radius: 5px; /* Rounded corners */
+  margin-right: 1rem; /* Space between input and button */
+}
+
+.recipe-finder button {
+  padding: 0.5rem 1rem; /* Padding around the text */
+  background: linear-gradient(145deg, #007CBA, #005f73); /* Gradient background */
+  color: white; /* Text color */
+  border: none; /* No border */
+  cursor: pointer; /* Cursor indicates clickable */
+  border-radius: 5px; /* Rounded corners */
+  transition: background 0.3s, box-shadow 0.2s; /* Smooth transitions */
+}
+
+.recipe-finder button:hover {
+  background: linear-gradient(155deg, #005f73, #007CBA); /* Hover effect */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); /* Shadow for depth */
+}
+
+.recipe-finder ul {
+  list-style: none; /* Remove default list styling */
+  padding: 0; /* Remove default padding */
+  margin-top: 1.5rem; /* Space above the list */
+}
+
+.recipe-finder li {
+  background-color: #444; /* Slightly lighter background */
+  margin-bottom: 1rem; /* Space between recipes */
+  padding: 1rem; /* Padding inside each recipe */
+  border-radius: 5px; /* Rounded corners for recipes */
+  display: flex; /* Flex layout for image and details */
+  align-items: center; /* Vertically align the content */
+}
+
+.recipe-finder img {
+  width: 100px; /* Fixed width for images */
+  height: 100px; /* Fixed height for images */
+  object-fit: cover; /* Ensure the images cover the space well */
+  border-radius: 5px; /* Rounded corners for images */
+  margin-right: 1rem; /* Space between image and text */
+}
+
+.recipe-finder h3 {
+  font-size: 1.2rem; /* Size of recipe title */
+  color: #fff; /* Brighter text for titles */
+  margin-bottom: 0.5rem; /* Space below the title */
+}
+
+.recipe-finder p {
+  font-size: 0.9rem; /* Size of cuisine type text */
+  color: #ccc; /* Slightly dimmer text for less emphasis */
+}
+
+.recipe-list {
+  list-style: none;
+  padding: 0;
+}
+
+.recipe-item {
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #444;
+}
+
+.recipe-item img {
+  max-width: 100px; /* Adjust as necessary */
+}
+
+.recipe-item h2 {
+  font-size: 1.2em;
+}
+
+.recipe-finder ul.recipe-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem; /* Provide space between grid items */
+  list-style-type: none; /* Remove list styles */
+  padding: 0;
+}
+
+.recipe-finder .recipe-item {
+  display: flex;
+  flex-direction: column; /* Stack image and text vertically */
+  align-items: center; /* Center-align the content */
+  background-color: #444; /* Slightly lighter background for each item */
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  transition: transform 0.3s, box-shadow 0.3s; /* Transition for hover effect */
+}
+
+.recipe-finder .recipe-item:hover {
+  transform: scale(1.02); /* Slightly increase size on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Larger shadow on hover */
+}
+
+.recipe-finder .recipe-item img {
+  width: auto; /* Adjust width to maintain aspect ratio */
+  max-width: 100%; /* Maximum width */
+  max-height: 150px; /* Maximum height */
+  object-fit: cover;
+  border-radius: 5px; /* Rounded corners for images */
+  margin-bottom: 0.5rem; /* Space between image and title */
+}
+
+.recipe-finder .recipe-item h2 {
+  color: #fff;
+  font-size: 1.1rem; /* Larger size for recipe title */
+  margin-bottom: 0.5rem; /* Space between title and ingredients */
+}
+
+.recipe-finder .recipe-item p {
+  font-size: 0.9rem; /* Size of ingredients text */
+  color: #ccc; /* Slightly dimmer text for less emphasis */
+  text-align: center; /* Center align the ingredients text */
+}
