@@ -5,8 +5,8 @@ const RecipeFinder = () => {
     const [query, setQuery] = useState('');
     const [recipes, setRecipes] = useState([]);
 
-    const YOUR_APP_ID = 'cc196422'; // Replace with your actual app_id
-    const YOUR_APP_KEY = '6fe098591d40bb4d62208cbab9223b44'; // Replace with your actual app_key
+    const YOUR_APP_ID = '[EXPIRED]'; // Replace with your actual app_id
+    const YOUR_APP_KEY = '[EXPIRED]'; // Replace with your actual app_key
 
     const fetchRecipes = () => {
         const apiUrl = `https://api.edamam.com/api/recipes/v2?type=public&q=${query}&app_id=${YOUR_APP_ID}&app_key=${YOUR_APP_KEY}`;
